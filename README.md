@@ -1,1 +1,2 @@
-# companymanagement managing company with .net
+# CMS.
+Company Management System developing with .net
