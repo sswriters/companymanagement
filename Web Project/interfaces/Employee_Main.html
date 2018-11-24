@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CMS</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+
+  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+
+ </head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  <header class="main-header">
+    <a href="index2.html" class="logo">
+      <span class="logo-lg"><b>Employee</b>CMS</span>
+    </a>
+    <nav class="navbar navbar-static-top" role="navigation">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="active"><a href="#"><i class="fa fa-files-o text-blue"></i> <span>Main Page</span></a></li>
+        <li><a href="#"><i class="fa fa-book text-yellow"></i> <span>Customer Info</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Logout</span></a></li>
+      </ul>
+    </section>
+  </aside>
+  <div class="content-wrapper">
+    <section class="content-header">
+      <h1>
+        Main Page
+        <small>You can see projects here</small>
+      </h1>
+    </section>
+    <section class="content container-fluid">
+        <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Users</h3>  
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>                
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="table-responsive">
+                <table class="table no-margin">
+                  <thead>
+                  <tr>
+                    <th>Project ID</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Assigned People</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>OR9842</td>
+                    <td>Project 1</td>
+                    <td><span class="label label-success">Open</span></td>
+                    <td>
+                      <div class="sparkbar" data-color="#00a65a" data-height="20">Anıl</div>
+                    </td>
+                    <td>
+                      <div class="tools">
+                          <i class="fa fa-share-square text-black"></i>
+                         <i class="fa fa-edit text-aqua"></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> OR7429</td>
+                    <td>Project 3</td>
+                    <td><span class="label label-danger">Closed</span></td>
+                    <td>
+                      <div class="sparkbar" data-color="#f56954" data-height="20">Kübra</div>
+                    </td>
+                    <td>
+                        <div class="tools">
+                            <i class="fa fa-share-square text-black"></i>
+                          <i class="fa fa-edit text-aqua"></i>
+                        </div>
+                      </td>
+                  </tr>  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="box box-success">
+              <div class="box-header">
+                <i class="fa fa-comments-o"></i>
+                <h3 class="box-title">Comments</h3> 
+                </div>
+              </div>
+              <div class="box-body chat" id="chat-box">
+                <div class="item">
+                  <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+  
+                  <p class="message">
+                    <a href="#" class="name">
+                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
+                      Kübra
+                    </a>
+                    Your project has been complated.I am closing it
+                  </p>
+                <div class="item">
+                  <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">  
+                  <p class="message">
+                    <a href="#" class="name">
+                      <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
+                      Customer A
+                    </a>
+                    Okey you can close it
+                  </p>           
+              <div class="box-footer">
+                <div class="input-group">
+                  <input class="form-control" placeholder="Type message...">  
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2018 <a href="#">Syswriters</a>.</strong> All rights reserved.
+  </footer>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="dist/js/adminlte.min.js"></script>
+
+</body>
+</html>
