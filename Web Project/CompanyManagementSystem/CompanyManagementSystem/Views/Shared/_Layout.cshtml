@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CMS</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="~/bower_components/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="~/bower_components/Ionicons/css/ionicons.min.css">
+
+        <link rel="stylesheet" href="~/dist/css/AdminLTE.min.css">
+
+        <link rel="stylesheet" href="~/dist/css/skins/skin-blue.min.css">
+    </environment>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <a href="" class="logo">
+                <span class="logo-lg"><b>@ViewData["Title"]</b>CMS</span>
+            </a>
+            <nav class="navbar navbar-static-top" role="navigation">
+  
+            </nav>
+        </header>
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Manager_Index"><i class="fa fa-files-o text-blue"></i> <span>Main Page</span></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Manager_Users"><i class="fa fa-edit text-yellow"></i> <span>User Management</span></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-circle-o text-red"></i> <span>Logout</span></a></li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            <section class="content-header">
+                <h1>
+                    @ViewData["Page_Info"]
+                    <small>@ViewData["Description"]</small>
+                </h1>
+            </section>
+
+            @RenderBody()
+
+
+        </div>
+
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2018 <a href="#">Syswriters</a>.</strong> All rights reserved.
+        </footer>
+
+        <environment include="Development">
+
+            <script src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+            <script src="~/dist/js/adminlte.min.js"></script>
+        </environment>
+</body>
+</html>
