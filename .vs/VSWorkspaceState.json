@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "\\Web Project",
+    "\\Web Project\\CompanyManagementSystem",
+    "\\Web Project\\CompanyManagementSystem\\CompanyManagementSystem",
+    "\\Web Project\\CompanyManagementSystem\\CompanyManagementSystem\\Views",
+    "\\Web Project\\CompanyManagementSystem\\CompanyManagementSystem\\Views\\Home",
+    "\\Web Project\\CompanyManagementSystem\\CompanyManagementSystem\\Views\\Shared"
   ],
   "PreviewInSolutionExplorer": false
 }

@@ -23,6 +23,8 @@
         <div class="login-logo">
         </div>
         <div class="login-box-body">
+            <a asp-area="" asp-controller="Home" asp-action="Customer_Index">Customer</a><br />
+            <a asp-area="" asp-controller="Home" asp-action="Employee_Index">Employee</a>
             <p class="login-box-msg">Please sign in for using CMS</p>
             <form asp-action="Manager_Index" asp-controller="Home" method="post">
                 <div class="form-group has-feedback">
