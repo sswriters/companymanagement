@@ -12225,11 +12225,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anil\\source\\repos\\CompanyManagementSystem\\CompanyManagementSystem\\CompanyManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\anil\\source\\repos\\sswriters\\companymanagement\\Web Project\\CompanyManagementSystem\\CompanyManagementSystem\\CompanyManagementSystem.csproj",
       "projectName": "CompanyManagementSystem",
-      "projectPath": "C:\\Users\\anil\\source\\repos\\CompanyManagementSystem\\CompanyManagementSystem\\CompanyManagementSystem.csproj",
+      "projectPath": "C:\\Users\\anil\\source\\repos\\sswriters\\companymanagement\\Web Project\\CompanyManagementSystem\\CompanyManagementSystem\\CompanyManagementSystem.csproj",
       "packagesPath": "C:\\Users\\anil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anil\\source\\repos\\CompanyManagementSystem\\CompanyManagementSystem\\obj\\",
+      "outputPath": "C:\\Users\\anil\\source\\repos\\sswriters\\companymanagement\\Web Project\\CompanyManagementSystem\\CompanyManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
