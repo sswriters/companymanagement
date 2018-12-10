@@ -21,8 +21,8 @@ namespace CompanyManagementSystem.Controllers
 
         public IActionResult Manager_Users()
         {
-            
-            return View();
+            cmsDBContext db = new cmsDBContext();
+            return View(db.Person.ToList());
         }
 
         public IActionResult Customer_Index()
@@ -45,6 +45,6 @@ namespace CompanyManagementSystem.Controllers
         {
             return View();
         }
-
+      
     }
 }

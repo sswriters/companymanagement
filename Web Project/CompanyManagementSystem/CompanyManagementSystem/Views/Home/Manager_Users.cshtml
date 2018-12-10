@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<People>
 @{
     ViewData["Title"] = "Manager";
     ViewData["Page_Info"] = "User Management";
@@ -11,3 +11,52 @@
 
     </section>
 </aside>
+<section class="content container-fluid">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Projects</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="table-responsive">
+                <table class="table no-margin">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>E-mail</th>
+                            <th>Phone</th>
+                            <th>Role</th>
+                            <th>Projects</th>
+                        </tr>
+                    </thead>
+                    @foreach (var Person in Model )
+                    {
+                        <tbody>
+                            <tr>
+                                <td>@Person.name</td>
+                                <td>@Person.mail</td>
+                                <td>@Person.phone</td>
+                                <td>@Person.role</td>
+                                <td>@Person.projects</td>
+                                <td>
+                                    <div class="tools">
+
+                                        <i class="fa fa-edit text-aqua"></i>
+                                        <i class="fa fa-trash-o text-red"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    }
+                </table>
+            </div>
+        </div>
+        <div class="box-footer clearfix">
+            <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Add User</a>
+        </div>
+</section>
