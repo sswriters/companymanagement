@@ -45,7 +45,7 @@
                                 <td>
                                     <div class="tools">
 
-                                        <a asp-area="" asp-controller="Home" asp-action="Delete_User"><i class="fa fa-edit text-aqua"></i></a>
+                                        <a asp-route-id="@Person.name" asp-controller="Home" asp-action="User_Update"><i class="fa fa-edit text-aqua"></i></a>
                                         <a asp-route-id="@Person.name" asp-controller="Home" asp-action="Delete_User"><i class="fa fa-trash-o text-red"></i></a>
                                     </div>
                                 </td>

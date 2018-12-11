@@ -10,39 +10,45 @@
 
     </section>
 </aside>
-    <div class="box-body">
-        <form method="post" asp-action="Manager_Add">
+<div class="box box-warning">
+            <div class="box-header with-border">
+              <h3 class="box-title">User Info</h3>
+            </div>
+            <div class="box-body">
+                <form method="post" asp-action="Manager_Add">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input asp-for="name" type="text" class="form-control" placeholder="Enter Full Name...">
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input asp-for="mail" type="email" class="form-control" placeholder="Enter E-Mail...">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input asp-for="pass" type="password" class="form-control" placeholder="Enter Password...">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input asp-for="phone" type="number" class="form-control" placeholder="Enter Phone Number ...">
+                    </div>
+                    <div class="form-group">
+                        <label>Projects</label>
+                        <input asp-for="projects" type="text" class="form-control" placeholder="Enter Phone Number ...">
+                    </div>
+                    <div class="form-group">
+                        <label>Role</label>
+                        <select class="form-control" asp-for="role">
+                            <option value="Manager">Manager</option>
+                            <option value="Customer">Customer</option>
+                            <option value="Employee">Employee</option>
+                        </select>
+                    </div>
+                    <p>
+                        <button type="submit" class="btn btn-danger " value="Submit">Add</button>
+                    </p>
+                </form>
+            </div>
+          </div>
 
-<p>
-    <label asp-for="name">Name</label>
-    <input asp-for="name" />
-</p>
-<p>
-    <label asp-for="mail">Email</label>
-    <input asp-for="mail" />
-</p>
-<p>
-    <label asp-for="pass">Password</label>
-    <input asp-for="pass" />
-</p>
-<p>
-    <label asp-for="phone">Phone</label>
-    <input asp-for="phone" />
-</p>
-<p>
-    <label asp-for="projects">Projects</label>
-    <input asp-for="projects" />
-</p>
-<p>
-    <label asp-for="role">Role</label>
-    <select asp-for="role">
-        <option value="Manager">Manager</option>
-        <option value="Customer">Customer</option>
-        <option value="Employee">Employee</option>
-    </select>
-</p>
-<p>
-    <button type="submit" class="btn btn-danger " value="Submit">Add</button>
-</p>
-    </form>
-</div>
+

@@ -1,0 +1,92 @@
+﻿@model People
+@{
+    ViewData["Title"] = "Manager";
+    ViewData["Page_Info"] = "Edit User";
+    ViewData["Description"] = "You can edit user here";
+}
+<aside class="main-sidebar">
+    <section class="sidebar">
+        @Html.Partial("_Menu_Manager")
+
+    </section>
+</aside>
+<div class="box box-warning">
+    <div class="box-header with-border">
+        <h3 class="box-title">User Info</h3>
+    </div>
+    <div class="box-body">
+        <form method="post" asp-action="Edit_User">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input asp-for="name" type="text" class="form-control" value="@Model.name" disabled>
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input asp-for="mail" type="email" class="form-control" value="@Model.mail">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input asp-for="pass" type="password" class="form-control" value="@Model.pass">
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input asp-for="phone" type="number" class="form-control" value="@Model.phone">
+            </div>
+            <div class="form-group">
+                <label>Projects</label>
+                <input asp-for="projects" type="text" class="form-control" value="@Model.projects">
+            </div>
+            <div class="form-group">
+                <label>Role</label>
+                <select class="form-control" asp-for="role">
+                    <option value="Manager">Manager</option>
+                    <option value="Customer">Customer</option>
+                    <option value="Employee">Employee</option>
+                </select>
+            </div>
+            <p>
+                <button type="submit" class="btn btn-danger " value="Submit">Update</button>
+            </p>
+        </form>
+    </div>
+</div>
+
+
+
+<!--
+<div class="box-body">
+    <form method="post" asp-action="Edit_User">
+
+        <p>
+            <label asp-for="name">Name</label>
+            <input asp-for="name" value="@Model.name"/>
+        </p>
+        <p>
+            <label asp-for="mail">Email</label>
+            <input asp-for="mail"value="@Model.mail" />
+        </p>
+        <p>
+            <label asp-for="pass">Password</label>
+            <input asp-for="pass" value="@Model.pass"/>
+        </p>
+        <p>
+            <label asp-for="phone">Phone</label>
+            <input asp-for="phone" value="@Model.phone"/>
+        </p>
+        <p>
+            <label asp-for="projects">Projects</label>
+            <input asp-for="projects" value="@Model.projects"/>
+        </p>
+        <p>
+            <label asp-for="role">Role</label>
+            <select asp-for="role">
+                <option value="Manager">Manager</option>
+                <option value="Customer">Customer</option>
+                <option value="Employee">Employee</option>
+            </select>
+        </p>
+        <p>
+            <button type="submit" class="btn btn-danger " value="Submit">Update</button>
+        </p>
+    </form>
+</div>

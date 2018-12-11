@@ -71,7 +71,7 @@ using CompanyManagementSystem.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(89, 600, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "01040a0b82df47d58ff83c3f8e333bc5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aeaffd6152264c82a3cc093cf19036e9", async() => {
                 BeginContext(95, 587, true);
                 WriteLiteral(@"
     <meta charset=""utf-8"">
@@ -105,12 +105,12 @@ using CompanyManagementSystem.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(691, 1542, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8ca58f43ec049b9abbd3789a13ad2ba", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7206353926fc4b8785a5ec60e4c8a792", async() => {
                 BeginContext(732, 131, true);
                 WriteLiteral("\r\n    <div class=\"login-box\">\r\n        <div class=\"login-logo\">\r\n        </div>\r\n        <div class=\"login-box-body\">\r\n            ");
                 EndContext();
                 BeginContext(863, 77, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5f78693d9964ceb885f4220f20e8d49", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d99a3bb6ec84220b5cf8993051463f6", async() => {
                     BeginContext(928, 8, true);
                     WriteLiteral("Customer");
                     EndContext();
@@ -136,7 +136,7 @@ using CompanyManagementSystem.Models;
                 WriteLiteral("<br />\r\n            ");
                 EndContext();
                 BeginContext(960, 77, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec220ff82bd43789cac09d2481a39fe", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1197ef94ece142e28fa60bb09bcee29a", async() => {
                     BeginContext(1025, 8, true);
                     WriteLiteral("Employee");
                     EndContext();
@@ -162,7 +162,7 @@ using CompanyManagementSystem.Models;
                 WriteLiteral("\r\n            <p class=\"login-box-msg\">Please sign in for using CMS</p>\r\n            ");
                 EndContext();
                 BeginContext(1122, 916, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eff979b2cf8d42fda365878e1dd34c78", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b8b84213250e4856a161313e1166b3c9", async() => {
                     BeginContext(1191, 840, true);
                     WriteLiteral(@"
                 <div class=""form-group has-feedback"">

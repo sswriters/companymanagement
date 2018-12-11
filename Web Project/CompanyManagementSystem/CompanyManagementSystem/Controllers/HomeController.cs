@@ -74,36 +74,15 @@ namespace CompanyManagementSystem.Controllers
         }
         public IActionResult Add_User()
         {
-           /* 
-            cmsDBContext db = new cmsDBContext();
-            People s = new People();
-            s.name = "Ahmet Mehmet";
-            s.pass = "admin";
-            s.phone = "858585";
-            s.projects = "Project 5";
-            s.mail = "ahmet@ahmet.com";
-            s.role = "Employee";
-            db.Person.Add(s);
-            db.SaveChanges();*/
+           
 
             return View();
         }
 
-        public IActionResult Manager_Add()
-        {
-            return View();
-        }
         [HttpPost]
         public IActionResult Manager_Add(People s)
         {
              cmsDBContext db = new cmsDBContext();
-             /*People s = new People();
-             s.name = "Ahmet Mehmet";
-             s.pass = "admin";
-             s.phone = "858585";
-             s.projects = "Project 5";
-             s.mail = "ahmet@ahmet.com";
-             s.role = "Employee";*/
              db.Person.Add(s);
              db.SaveChanges();
 
@@ -116,6 +95,12 @@ namespace CompanyManagementSystem.Controllers
             db.SaveChanges();
             return RedirectToAction("Manager_Index");
         }
+        public IActionResult Add_Project()
+        {
+
+
+            return View();
+        }
         public IActionResult Project_Delete(string id)
         {
             cmsDBContext db = new cmsDBContext();
@@ -123,16 +108,39 @@ namespace CompanyManagementSystem.Controllers
             p.projectid = id;
             db.Projects.Remove(p);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Manager_Index");
         }
-        public IActionResult Project_Edit()
+        public IActionResult Project_Update(string id)
         {
-            return View();
-        }
-        public IActionResult Add_Project()
-        {
-            return View();
-        }
+            cmsDBContext db = new cmsDBContext();
+            Project s = new Project();
+            s.projectid = id;
 
+            return View(db.Projects.Find(s.projectid));
+        }
+        public IActionResult Edit_Project(Project p)
+        {
+            cmsDBContext db = new cmsDBContext();
+            db.Projects.Update(p);
+            db.SaveChanges();
+            return RedirectToAction("Manager_Index");
+            
+        }
+        public IActionResult User_Update(string id)
+        {
+            cmsDBContext db = new cmsDBContext();
+            People s = new People();
+            s.name = id;
+
+            return View(db.Person.Find(s.name));
+        }
+        public IActionResult Edit_User(People p)
+        {
+            cmsDBContext db = new cmsDBContext();
+            db.Person.Update(p);
+            db.SaveChanges();
+            return RedirectToAction("Manager_Users");
+
+        }
     }
 }

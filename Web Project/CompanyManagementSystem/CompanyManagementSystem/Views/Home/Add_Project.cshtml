@@ -10,40 +10,47 @@
 
     </section>
 </aside>
-<div class="box-body">
-    <form method="post" asp-action="Project_Add">
+<div class="box box-warning">
+    <div class="box-header with-border">
+        <h3 class="box-title">User Info</h3>
+    </div>
+    <div class="box-body">
+        <form method="post" asp-action="Project_Add">
+            <div class="form-group">
+                <label>Project ID</label>
+                <input asp-for="projectid" type="text" class="form-control" placeholder="Enter Full Name...">
+            </div>
+            <div class="form-group">
+                <label>Project Name</label>
+                <input asp-for="projectname" type="text" class="form-control" placeholder="Enter E-Mail...">
+            </div>
+            <div class="form-group">
+                <label>Due Date</label>
+                <input asp-for="duedate" type="date" class="form-control" placeholder="Enter Password...">
+            </div>
 
-        <p>
-            <label asp-for="projectid">ID</label>
-            <input asp-for="projectid" />
-        </p>
-        <p>
-            <label asp-for="projectname">Project Name</label>
-            <input asp-for="projectname" />
-        </p>
-        <p>
-            <label asp-for="duedate">Due Date</label>
-            <input asp-for="duedate" />
-        </p>
+            <div class="form-group">
+                <label>Assigned People</label>
+                <select class="form-control" asp-for="assigned_people">
+                    <option value="Anil">Anil</option>
+                    <option value="Ebru">Ebru</option>
+                    <option value="Gulfem">Gulfem</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Status</label>
+                <select class="form-control" asp-for="status">
+                    <option value="Open">Open</option>
+                    <option value="Closed">Closed</option>
+                    <option value="Pending">Pending</option>
+                </select>
+            </div>
 
-        <p>
-            <label asp-for="assigned_people">Assigned People</label>
-            <select asp-for="assigned_people">
-                <option value="Anil">Anil</option>
-                <option value="Ebru">Ebru</option>
-                <option value="Gulfem">Gulfem</option>
-            </select>
-        </p>
-        <p>
-            <label asp-for="status">Status</label>
-            <select asp-for="status">
-                <option value="Open">Open</option>
-                <option value="Closed">Customer</option>
-                <option value="Pending">Pending</option>
-            </select>
-        </p>
-        <p>
-            <button type="submit" class="btn btn-danger " value="Submit">Add</button>
-        </p>
-    </form>
+
+            <p>
+                <button type="submit" class="btn btn-danger " value="Submit">Add</button>
+            </p>
+        </form>
+    </div>
 </div>
+
