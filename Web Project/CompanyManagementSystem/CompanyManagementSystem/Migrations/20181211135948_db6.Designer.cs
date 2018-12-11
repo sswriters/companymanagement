@@ -3,14 +3,16 @@ using CompanyManagementSystem.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CompanyManagementSystem.Migrations
 {
     [DbContext(typeof(cmsDBContext))]
-    partial class cmsDBContextModelSnapshot : ModelSnapshot
+    [Migration("20181211135948_db6")]
+    partial class db6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

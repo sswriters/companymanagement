@@ -7,6 +7,7 @@ namespace CompanyManagementSystem.Models
     public partial class cmsDBContext : DbContext
     {
         public DbSet<People> Person { get; set; }
+        public DbSet<Project> Projects { get; set; }
         public cmsDBContext()
         {
         }

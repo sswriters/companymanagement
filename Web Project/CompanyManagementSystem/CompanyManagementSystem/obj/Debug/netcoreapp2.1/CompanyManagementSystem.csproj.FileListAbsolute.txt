@@ -144,3 +144,4 @@ C:\Users\Anıl\source\repos\sswriters\companymanagement\Web Project\CompanyManag
 C:\Users\Anıl\source\repos\sswriters\companymanagement\Web Project\CompanyManagementSystem\CompanyManagementSystem\obj\Debug\netcoreapp2.1\CompanyManagementSystem.pdb
 C:\Users\Anıl\source\repos\sswriters\companymanagement\Web Project\CompanyManagementSystem\CompanyManagementSystem\obj\Debug\netcoreapp2.1\CompanyManagementSystem.csproj.CopyComplete
 C:\Users\Anıl\source\repos\sswriters\companymanagement\Web Project\CompanyManagementSystem\CompanyManagementSystem\obj\Debug\netcoreapp2.1\Razor\Views\Home\Add_User.g.cshtml.cs
+C:\Users\Anıl\source\repos\sswriters\companymanagement\Web Project\CompanyManagementSystem\CompanyManagementSystem\obj\Debug\netcoreapp2.1\Razor\Views\Home\Add_Project.g.cshtml.cs

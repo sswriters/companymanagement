@@ -14,11 +14,25 @@ namespace CompanyManagementSystem.Controllers
         {
 
             //Add_User();
+            /*
+            cmsDBContext db = new cmsDBContext();
+            Project s = new Project();
+            s.projectid = "A21";
+            s.projectname = "Job 1";
+            s.duedate = "26.01.1995";
+            s.status = "Open";
+            s.assigned_people = "Anıl";
+            db.Projects.Add(s);
+            db.SaveChanges();
+            */
+
+
             return View();
         }
         public IActionResult Manager_Index()
         {
-            return View();
+            cmsDBContext db = new cmsDBContext();
+            return View(db.Projects.ToList());
         }
 
         public IActionResult Manager_Users()
@@ -56,11 +70,12 @@ namespace CompanyManagementSystem.Controllers
             db.Person.Remove(s);
             db.SaveChanges();
 
-            return View("Manager_Index");
+            return RedirectToAction("Manager_Users");
         }
         public IActionResult Add_User()
         {
-           /* cmsDBContext db = new cmsDBContext();
+           /* 
+            cmsDBContext db = new cmsDBContext();
             People s = new People();
             s.name = "Ahmet Mehmet";
             s.pass = "admin";
@@ -92,10 +107,32 @@ namespace CompanyManagementSystem.Controllers
              db.Person.Add(s);
              db.SaveChanges();
 
-            return View("Manager_Index");
+            return RedirectToAction("Manager_Users");
         }
-
-
+        public IActionResult Project_Add(Project p)
+        {
+            cmsDBContext db = new cmsDBContext();
+            db.Projects.Add(p);
+            db.SaveChanges();
+            return RedirectToAction("Manager_Index");
+        }
+        public IActionResult Project_Delete(string id)
+        {
+            cmsDBContext db = new cmsDBContext();
+            Project p = new Project();
+            p.projectid = id;
+            db.Projects.Remove(p);
+            db.SaveChanges();
+            return View();
+        }
+        public IActionResult Project_Edit()
+        {
+            return View();
+        }
+        public IActionResult Add_Project()
+        {
+            return View();
+        }
 
     }
 }

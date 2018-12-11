@@ -1,0 +1,49 @@
+﻿@model Project
+@{
+    ViewData["Title"] = "Manager";
+    ViewData["Page_Info"] = "Add project";
+    ViewData["Description"] = "You can add project here";
+}
+<aside class="main-sidebar">
+    <section class="sidebar">
+        @Html.Partial("_Menu_Manager")
+
+    </section>
+</aside>
+<div class="box-body">
+    <form method="post" asp-action="Project_Add">
+
+        <p>
+            <label asp-for="projectid">ID</label>
+            <input asp-for="projectid" />
+        </p>
+        <p>
+            <label asp-for="projectname">Project Name</label>
+            <input asp-for="projectname" />
+        </p>
+        <p>
+            <label asp-for="duedate">Due Date</label>
+            <input asp-for="duedate" />
+        </p>
+
+        <p>
+            <label asp-for="assigned_people">Assigned People</label>
+            <select asp-for="assigned_people">
+                <option value="Anil">Anil</option>
+                <option value="Ebru">Ebru</option>
+                <option value="Gulfem">Gulfem</option>
+            </select>
+        </p>
+        <p>
+            <label asp-for="status">Status</label>
+            <select asp-for="status">
+                <option value="Open">Open</option>
+                <option value="Closed">Customer</option>
+                <option value="Pending">Pending</option>
+            </select>
+        </p>
+        <p>
+            <button type="submit" class="btn btn-danger " value="Submit">Add</button>
+        </p>
+    </form>
+</div>
