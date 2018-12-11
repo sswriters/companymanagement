@@ -58,7 +58,7 @@ using CompanyManagementSystem.Models;
             WriteLiteral("\r\n<ul class=\"sidebar-menu\" data-widget=\"tree\">\r\n    <li>");
             EndContext();
             BeginContext(176, 131, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1465af67b16448c9bd9f776c52356aed", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf670c8dff28474fa04f82f1953e5964", async() => {
                 BeginContext(241, 62, true);
                 WriteLiteral("<i class=\"fa fa-files-o text-blue\"></i> <span>Main Page</span>");
                 EndContext();
@@ -84,7 +84,7 @@ using CompanyManagementSystem.Models;
             WriteLiteral("</li>\r\n    <li>");
             EndContext();
             BeginContext(322, 138, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99ecb4acf6984e0fb1d2a6c8069247bd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57886ffc8b394372b05dbaa08431d36b", async() => {
                 BeginContext(386, 70, true);
                 WriteLiteral("<i class=\"fa fa-envelope text-yellow\"></i> <span>My Information</span>");
                 EndContext();
@@ -110,7 +110,7 @@ using CompanyManagementSystem.Models;
             WriteLiteral("</li>\r\n    <li>");
             EndContext();
             BeginContext(475, 119, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68485fc54b894a4b81915ebe3c17b93a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2a13641f097430caf0aa3e0c0f8e463", async() => {
                 BeginContext(531, 59, true);
                 WriteLiteral("<i class=\"fa fa-circle-o text-red\"></i> <span>Logout</span>");
                 EndContext();

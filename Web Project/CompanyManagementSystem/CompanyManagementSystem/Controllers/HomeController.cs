@@ -12,6 +12,8 @@ namespace CompanyManagementSystem.Controllers
     {
         public IActionResult Index()
         {
+
+            //Add_User();
             return View();
         }
         public IActionResult Manager_Index()
@@ -43,8 +45,57 @@ namespace CompanyManagementSystem.Controllers
 
         public IActionResult Employee_Info()
         {
+        
             return View();
         }
-      
+        public IActionResult Delete_User(string id)
+        {
+            cmsDBContext db = new cmsDBContext();
+            People s = new People();
+            s.name = id;
+            db.Person.Remove(s);
+            db.SaveChanges();
+
+            return View("Manager_Index");
+        }
+        public IActionResult Add_User()
+        {
+           /* cmsDBContext db = new cmsDBContext();
+            People s = new People();
+            s.name = "Ahmet Mehmet";
+            s.pass = "admin";
+            s.phone = "858585";
+            s.projects = "Project 5";
+            s.mail = "ahmet@ahmet.com";
+            s.role = "Employee";
+            db.Person.Add(s);
+            db.SaveChanges();*/
+
+            return View();
+        }
+
+        public IActionResult Manager_Add()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Manager_Add(People s)
+        {
+             cmsDBContext db = new cmsDBContext();
+             /*People s = new People();
+             s.name = "Ahmet Mehmet";
+             s.pass = "admin";
+             s.phone = "858585";
+             s.projects = "Project 5";
+             s.mail = "ahmet@ahmet.com";
+             s.role = "Employee";*/
+             db.Person.Add(s);
+             db.SaveChanges();
+
+            return View("Manager_Index");
+        }
+
+
+
     }
 }

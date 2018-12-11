@@ -45,8 +45,8 @@
                                 <td>
                                     <div class="tools">
 
-                                        <i class="fa fa-edit text-aqua"></i>
-                                        <i class="fa fa-trash-o text-red"></i>
+                                        <a asp-area="" asp-controller="Home" asp-action="Delete_User"><i class="fa fa-edit text-aqua"></i></a>
+                                        <a asp-route-id="@Person.name" asp-controller="Home" asp-action="Delete_User"><i class="fa fa-trash-o text-red"></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -57,6 +57,6 @@
             </div>
         </div>
         <div class="box-footer clearfix">
-            <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Add User</a>
+            <a href="Add_User" class="btn btn-sm btn-info btn-flat pull-left">Add User</a>
         </div>
 </section>
