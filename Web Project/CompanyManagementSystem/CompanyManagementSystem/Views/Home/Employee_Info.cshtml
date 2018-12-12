@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<People>
 @{
     ViewData["Title"] = "Employee";
     ViewData["Page_Info"] = "Info Page";
@@ -10,3 +10,43 @@
 
     </section>
 </aside>
+<section class="content container-fluid">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Projects</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="table-responsive">
+                <table class="table no-margin">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>E-mail</th>
+                            <th>Phone</th>
+
+
+                        </tr>
+                    </thead>
+                    @foreach (var Person in Model)
+                    {
+                        if ( Person.role == "Customer")
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@Person.name</td>
+                                    <td>@Person.mail</td>
+                                    <td>@Person.phone</td>
+                                </tr>
+                            </tbody>
+                        }
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

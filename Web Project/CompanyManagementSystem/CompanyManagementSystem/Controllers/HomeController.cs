@@ -12,55 +12,44 @@ namespace CompanyManagementSystem.Controllers
     {
         public IActionResult Index()
         {
-
-            //Add_User();
-            /*
-            cmsDBContext db = new cmsDBContext();
-            Project s = new Project();
-            s.projectid = "A21";
-            s.projectname = "Job 1";
-            s.duedate = "26.01.1995";
-            s.status = "Open";
-            s.assigned_people = "Anıl";
-            db.Projects.Add(s);
-            db.SaveChanges();
-            */
-
-
-            return View();
+                return View();
+           
         }
         public IActionResult Manager_Index()
         {
             cmsDBContext db = new cmsDBContext();
             return View(db.Projects.ToList());
         }
-
         public IActionResult Manager_Users()
         {
             cmsDBContext db = new cmsDBContext();
             return View(db.Person.ToList());
         }
-
-        public IActionResult Customer_Index()
+        public IActionResult Customer_Index(People p)
         {
+            cmsDBContext db = new cmsDBContext();
 
-            return View();
+            return View(db.Projects.ToList());
+
         }
-
         public IActionResult Customer_Info()
         {
-            return View();
+            cmsDBContext db = new cmsDBContext();
+            People p = new People();
+            p.name = TempData["Name"].ToString();
+            return View(db.Person.Find(p.name));
+
         }
         public IActionResult Employee_Index()
         {
-
-            return View();
+            cmsDBContext db = new cmsDBContext();
+            return View(db.Projects.ToList());
         }
-
         public IActionResult Employee_Info()
         {
-        
-            return View();
+
+            cmsDBContext db = new cmsDBContext();
+            return View(db.Person.ToList());
         }
         public IActionResult Delete_User(string id)
         {
@@ -78,8 +67,6 @@ namespace CompanyManagementSystem.Controllers
 
             return View();
         }
-
-        [HttpPost]
         public IActionResult Manager_Add(People s)
         {
              cmsDBContext db = new cmsDBContext();
@@ -140,7 +127,43 @@ namespace CompanyManagementSystem.Controllers
             db.Person.Update(p);
             db.SaveChanges();
             return RedirectToAction("Manager_Users");
+        }
+       /* public IActionResult Customer_User_Update()
+        {
+            cmsDBContext db = new cmsDBContext();
+            People s = new People();
+            s.name = ViewBag.Person;
 
+            return View(db.Person.Find(s.name));
+        }*/
+        public IActionResult Customer_Edit_User(People p)
+        {
+            cmsDBContext db = new cmsDBContext();
+            db.Person.Update(p);
+            db.SaveChanges();
+            //return RedirectToAction("Manager_Users");
+            return View("Customer_Info");
+        }
+        public IActionResult Login(string name, string pass)
+        {
+
+            cmsDBContext db = new cmsDBContext();
+            People s = new People();
+            s.name = name;
+            s = db.Person.Find(s.name);
+            //TempData["Project"] = s.projects;TempData["Projects"].ToString
+            //TempData["Project"] = "P";
+            TempData["Project"] = s.projects;
+            TempData["Name"] = s.name;
+            TempData["Role"] = s.role;
+            if (pass == s.pass) { 
+            if (s.role=="Manager") { return RedirectToAction("Manager_Index"); }
+            if (s.role == "Customer") { return RedirectToAction("Customer_Index"); }
+            if (s.role == "Employee") { return RedirectToAction("Employee_Index"); }
+            }
+            
+            return RedirectToAction("Index");
+            
         }
     }
 }

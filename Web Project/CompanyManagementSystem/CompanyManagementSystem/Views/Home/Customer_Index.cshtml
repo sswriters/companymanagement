@@ -1,8 +1,10 @@
-﻿
+﻿@model IEnumerable<Project>
 @{
     ViewData["Title"] = "Customer";
     ViewData["Page_Info"] = "Main Page";
-    ViewData["Description"] = "You can see projects here";
+    ViewData["Description"] = "You can see your projects here";
+    //svar deneme = TempData["Project"].ToString();
+    if(TempData["Project"] == null) { TempData["Project"] = "S"; }
 }
 <aside class="main-sidebar">
     <section class="sidebar">
@@ -10,3 +12,77 @@
 
     </section>
 </aside>
+<section class="content container-fluid">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Users</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="table-responsive">
+                <table class="table no-margin">
+                    <thead>
+                        <tr>
+                            <th>Project ID</th>
+                            <th>Project Name</th>
+                            <th>Status</th>
+                            <th>Assigned People</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    @foreach (var item in Model)
+                    {
+
+
+
+                        if (@TempData["Project"].ToString() == @item.projectname)
+                        {
+                            <tbody>
+
+                                <tr>
+
+                                    <td>@item.projectid</td>
+                                    <td>@item.projectname</td>
+
+                                    <td>
+                                        @if (item.status == "Open")
+                                        {
+                                            <span class="label label-success">Open</span>
+                                        }
+                                        @if (item.status == "Closed")
+                                        {
+                                            <span class="label label-danger">Closed</span>
+                                        }
+                                        @if (item.status == "Pending")
+                                        {
+                                            <span class="label label-warning">Pending</span>
+                                        }
+                                    </td>
+
+
+
+                                    <td>@item.assigned_people</td>
+                                    <td>@item.duedate</td>
+                                    <td>
+                                        <div class="tools">
+                                            <a asp-route-id="@item.projectid" asp-controller="Home" asp-action="Project_Update"><i class="fa fa-edit text-aqua"></i></a>
+                                            <!--<a asp-route-id="@item.projectid" asp-controller="Home" asp-action="Project_Delete"><i class="fa fa-trash-o text-red"></i></a>-->
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        }
+
+                }
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+

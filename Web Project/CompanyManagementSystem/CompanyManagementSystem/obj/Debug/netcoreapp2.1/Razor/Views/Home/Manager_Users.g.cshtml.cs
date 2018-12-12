@@ -159,7 +159,7 @@ using CompanyManagementSystem.Models;
             WriteLiteral("</td>\r\n                                <td>\r\n                                    <div class=\"tools\">\r\n\r\n                                        ");
             EndContext();
             BeginContext(1760, 118, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13e57c7c9e7b4b30bb5e8576d0d53b4e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "838c27f2c53b4e1995621bb895be9cfe", async() => {
                 BeginContext(1838, 36, true);
                 WriteLiteral("<i class=\"fa fa-edit text-aqua\"></i>");
                 EndContext();
@@ -196,7 +196,7 @@ using CompanyManagementSystem.Models;
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(1920, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "412e16fba8c74c6bbbab693a3798f276", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4a627bff59104ef8bac63eb38ceda3e2", async() => {
                 BeginContext(1998, 38, true);
                 WriteLiteral("<i class=\"fa fa-trash-o text-red\"></i>");
                 EndContext();
